@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المساعدة والدعم - موقع سياحي</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            direction: rtl; /* اتجاه الكتابة من اليمين لليسار */
+        }
+        .container {
+            max-width: 500px;
+            margin-top: 50px;
+           
+        }
+        .card {
+            border: none;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .card-header {
+            background-color: white;
+            border-bottom: 1px solid #e9ecef;
+            padding: 20px 25px;
+            text-align: center;
+        }
+        .card-header h3 {
+            font-weight: 700;
+            color: #333;
+        }
+        .card-body {
+            padding: 25px;
+            text-align: center;
+        }
+        .card-body p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            color: #555;
+        }
+        .help-button {
+            background-color: #c48310;
+            color: #fff;
+            padding: 15px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        .help-button:hover {
+            background-color: #a66f0d;
+            transform: translateY(-2px);
+            color: #fff;
+        }
+        /* إخفاء المحتوى افتراضيًا */
+        #help-content {
+            display: none;
+        }
+        /* إظهار المحتوى عند الوصول إليه من الرابط */
+        #help-content:target {
+            display: block;
+        }
+        .phone-section {
+            margin-top: 25px;
+            padding: 20px;
+            background-color: #fff3cd;
+            border-radius: 8px;
+            border: 1px solid #ffeeba;
+        }
+        .phone-section h4 {
+            color: #856404;
+            font-weight: bold;
+        }
+        .phone-section ul {
+            text-align: right;
+            list-style: none;
+            padding: 0;
+            margin: 15px 0 0;
+        }
+        .phone-section li {
+            margin-bottom: 10px;
+            color: #383838;
+        }
+        .phone-number {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #c48310;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h3>المساعدة والدعم</h3>
+        </div>
+        <div class="card-body">
+            <p>هل تواجه مشكلة؟ اضغط على الزر أدناه لمعرفة كيفية التواصل معنا.</p>
+            
+            <a href="#help-content" class="help-button">أحتاج إلى مساعدة</a>
+            <a href="#" class="help-button">إخفاء</a>
+
+            <div id="help-content" class="phone-section">
+                <h4>نحن هنا لمساعدتك!</h4>
+                <p>يرجى التواصل معنا إذا كنت تواجه أي من المشاكل التالية:</p>
+                <ul class="text-right">
+                    <li><i class="fas fa-exclamation-triangle text-danger ml-2"></i> خطأ في تسجيل الدخول أو التسجيل.</li>
+                    <li><i class="fas fa-credit-card text-success ml-2"></i> مشكلة في عملية الدفع أو الحجز.</li>
+                    <li><i class="fas fa-bug text-info ml-2"></i> عدم تحميل الصور أو المحتوى بشكل صحيح.</li>
+                    <li><i class="fas fa-question-circle text-warning ml-2"></i> أي استفسارات أو مشاكل أخرى.</li>
+                </ul>
+
+                <p class="mb-2">للمساعدة الفورية، يرجى الاتصال بنا عبر الهاتف:</p>
+                <div class="d-flex justify-content-center align-items-center mb-3">
+                    <i class="fas fa-phone-alt fa-2x ml-3 text-success"></i>
+                    <span class="phone-number">+20-2-19800</span>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

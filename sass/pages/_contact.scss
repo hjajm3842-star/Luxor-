@@ -1,0 +1,517 @@
+@use "./sass/variables/colors" as *;
+
+
+
+@use "./sass/variables/colors" as *;
+
+/*
+ * Top Bar Styles
+ */
+.top-bar {
+    background-color: $font-color;
+    padding: 1px;
+    font-size: 0.9rem;
+    color: $error-color;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1050;
+    border-radius: 70px;
+    
+    &.no-padding {
+        padding: 1px;
+    }
+
+    &-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 0 15px;
+        font-weight: 700;
+    }
+
+    &-left,
+    &-right {
+        display: flex;
+        align-items: center;
+
+        span {
+            margin: 0 5px;
+            color: $base-color;
+        }
+
+        a {
+            color: $error-color;
+            text-decoration: none;
+            margin-right: 10px;
+            transition: color 0.3s ease;
+            
+            &:hover {
+                color: $warning-color;
+            }
+        }
+
+        i {
+            margin-right: 5px;
+            font-size: 20px;
+        }
+    }
+}
+
+.language-dropdown {
+    position: relative;
+    display: inline-block;
+    list-style: none;
+    margin-right: 15px;
+    
+    .dropbtn {
+        background-color: transparent;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        cursor: pointer;
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+        
+        i {
+            margin-left: 5px;
+            padding: 5px;
+        }
+    }
+
+    &-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        right: 0;
+        text-align: right;
+        border-radius: 5px;
+        padding: 10px 15px;
+
+        a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &:hover {
+                background-color: #605656;
+                border-radius: 50px;
+            }
+        }
+    }
+
+    &:hover .language-dropdown-content {
+        display: block;
+        border-radius: 50px;
+    }
+}
+
+.login-link {
+    color: $bg-primary;
+    text-decoration: none;
+    padding: 10px 15px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+
+    i {
+        margin-right: 8px;
+        font-size: 20px;
+    }
+
+    &:hover {
+        color: $active-color;
+        background-color: $success-color;
+        border-color: $active-color;
+    }
+}
+
+/*
+ * Carousel Styles
+ */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(100%);
+}
+
+.carousel-inner img {
+    height: 86vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+/*
+ * Profile Menu Styles
+ */
+.profile-menu {
+    width: 350px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    padding: 10px 0;
+    margin-top: 10px;
+    direction: rtl;
+    text-align: right;
+    
+    .dropdown-header {
+        display: flex;
+        align-items: center;
+        padding: 10px 20px;
+        gap: 15px;
+        border-bottom: 1px solid #4a4545;
+        margin-bottom: 10px;
+
+        img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+        }
+
+        span {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #333;
+        }
+    }
+
+    .dropdown-item {
+        display: flex;
+        align-items: center;
+        padding: 10px 20px;
+        color: #363232;
+        gap: 10px;
+
+        &:hover {
+            background-color: #666;
+            color: #000;
+            border-radius: 50px;
+        }
+
+        i {
+            color: #030303;
+            font-size: 1.2rem;
+        }
+    }
+}
+
+.dropdown-submenu {
+    position: relative;
+    font-weight: 700;
+    font-size: 20px;
+    color: #000;
+
+    .dropdown-menu {
+        top: 100%;
+        left: 20%;
+        transform: translateX(-50%);
+        margin-top: 3px;
+        justify-content: center;
+        background-color: #ffffff;
+        border-radius: 50px;
+        padding: 10px 20px;
+
+        a {
+            text-align: center;
+            border-radius: 5px;
+            padding: 10px 20px;
+            justify-content: center;
+            color: #000;
+            font-weight: 700;
+
+            &:hover {
+                color: $warning-color;
+            }
+        }
+    }
+
+    &:hover .dropdown-menu {
+        display: block;
+    }
+}
+
+.scrollable-menu {
+    height: auto;
+    max-height: 400px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.navbar-brand img {
+    border-radius: 50%;
+    border: 4px solid $input-border;
+  margin-top: 48%;
+    margin-left: -3px;
+    margin-right: 7px;
+}
+// اخر كود اناف بار
+
+
+
+        /* القسم الرئيسي - Hero Section */
+        .hero-section {
+            background-image: url('https://images.unsplash.com/photo-1623862215167-33109a962a26?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            height: 90vh;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+        .hero-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+        .hero-content {
+            z-index: 1;
+        }
+        .hero-content h1 {
+            font-size: 3.8rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+        .search-form {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* الأقسام العامة */
+        .section-heading {
+            text-align: center;
+            font-weight: bold;
+            color: #333;
+                margin-bottom: 58px;
+    margin-top: 65px;
+        }
+        
+        /* بطاقات الأماكن والأنشطة */
+        .card {
+            border: none;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card-img-top {
+            height: 250px;
+            object-fit: cover;
+        }
+        .icon-box {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+        .icon-box:hover {
+            transform: scale(1.05);
+        }
+        .icon-box i {
+            font-size: 2.5rem;
+            color: #c48310;
+        }
+        
+        /* قسم الشهادات */
+        .testimonial-card {
+            background-color: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            border-left: 5px solid #c48310;
+        }
+
+// اخر كود  الصفحه الرئسيه  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.card {
+    border: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+    background-color: #fff; /* لون خلفية أبيض نقي */
+    margin-bottom: 20px; /* إضافة مساحة أسفل البطاقة */
+    border-bottom: 1px solid #eee; /* إضافة فاصل سفلي خفيف */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* تعزيز الظل عند التhover */
+}
+
+.rating {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.rating i {
+    color: #cccccc; /* لون النجوم الرمادي الافتراضي */
+    font-size: 1.2rem;
+    margin: 0 3px; /* زيادة التباعد بين النجوم */
+    transition: color 0.3s ease; /* إضافة انتقال سلس لتغيير اللون */
+}
+
+.rating:hover i {
+    color: #ffc107; /* لون النجوم الأصفر عند التhover */
+}
+
+/* تنسيقات تقييم النجوم */
+.rating {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.rating i {
+    color: #cccccc; /* لون النجوم الرمادي الافتراضي */
+    font-size: 1.2rem;
+    margin: 0; /* تم إزالة المسافة بين النجوم لتكون متجاورة */
+    transition: color 0.3s ease; /* إضافة انتقال سلس لتغيير اللون */
+}
+
+.rating i:hover {
+    color: #dc3545; /* اللون الأحمر عند تمرير الماوس */
+}
+/* تنسيقات تقييم النجوم */
+.rating {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.rating i {
+    color: #cccccc; /* لون النجوم الرمادي الافتراضي */
+    font-size: 1.2rem;
+    margin: 0 2px;
+    opacity: 0.5; /* جعل النجوم باهتة قليلاً في البداية */
+    animation: pulse 1.5s infinite; /* تطبيق الحركة على كل نجمة */
+}
+
+/* تنسيقات تقييم النجوم */
+.rating {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.rating i {
+    color: #cccccc; /* لون النجوم الرمادي الافتراضي */
+    font-size: 1.2rem;
+    margin: 0 2px;
+    opacity: 0.5; /* جعل النجوم باهتة قليلاً في البداية */
+    animation: pulse 1.5s infinite; /* تطبيق الحركة على كل نجمة */
+}
+
+
+// .rating i:nth-child(1) {
+//     animation-delay: 0s;
+// }
+
+// .rating i:nth-child(2) {
+//     animation-delay: 0.2s;
+// }
+
+// .rating i:nth-child(3) {
+//     animation-delay: 0.4s;
+// }
+
+// .rating i:nth-child(4) {
+//     animation-delay: 0.6s;
+// }
+
+// .rating i:nth-child(5) {
+//     animation-delay: 0.8s;
+// }
+
+
+// @keyframes pulse {
+//     0% {
+//         color: #cccccc;
+//         opacity: 0.5;
+//         transform: scale(1);
+//     }
+//     50% {
+//         color: #ffc107; 
+//         opacity: 1;
+//         transform: scale(1.2);
+//     }
+//     100% {
+//         color: #cccccc;
+//         opacity: 0.5;
+//         transform: scale(1);
+//     }
+// }
+// / 2اخر كود  الصفحه 
+
+/* هذا الكود يجعل كل الأيقونات داخل الروابط (a) في القائمة المنسدلة (dropdown-item) باللون الذهبي */
+
+footer {
+ background: #f49c05;
+ height: 50px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+  position: fixed; /* هذا يجعل العنصر ثابتًا بالنسبة لنافذة المتصفح */
+  bottom: 0; /* هذا يضعه في الجزء السفلي من الشاشة */
+  width: 100%; /* هذا يضمن أن يمتد على عرض الشاشة بالكامل */
+}
+
+footer p {
+ color: white;
+ margin: 0;
+}
+
+
+
+
+@media (max-width: 991.98px) {
+  .navbar-expand-lg > .container,
+  .navbar-expand-lg > .container-fluid{
+    padding-right: 0;
+    padding-left: 0;
+    margin-top:70px;
+  }
+}
+
+@media (max-width: 991.98px) {
+    .section-heading
+{
+        padding-right: 0;
+        padding-left: 0;
+        /* هذا هو التعديل */
+        margin-top:51%;
+        margin-bottom: 26px; /* إضافة هامش سفلي */
+    }
+}

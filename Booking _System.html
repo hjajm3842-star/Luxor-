@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نظام حجز - موقع سياحي</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* ارتفاع الشاشة بالكامل */
+            margin: 0;
+            padding: 20px; /* إضافة مساحة داخلية لمنع التصاق المحتوى بالحواف */
+            direction: rtl;
+            box-sizing: border-box; /* لضمان أن الـ padding لا يؤثر على العرض */
+        }
+        .container {
+            max-width: 550px;
+            /* إزالة الـ margin-top ليكون المحتوى في المنتصف عمودياً */
+        }
+        .card {
+            border: none;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .card-header {
+            background-color: white;
+            border-bottom: 1px solid #e9ecef;
+            padding: 20px 25px;
+            text-align: center;
+        }
+        .card-header h3 {
+            font-weight: 700;
+            color: #333;
+        }
+        .card-body {
+            padding: 30px;
+        }
+        .form-label {
+            font-weight: bold;
+            color: #555;
+            text-align: right;
+            display: block;
+        }
+        .form-control {
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            padding: 12px;
+            margin-bottom: 20px;
+        }
+        .btn-booking {
+            background-color: #c48310;
+            color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            font-weight: bold;
+            width: 100%;
+            transition: background-color 0.3s, transform 0.2s;
+            border: none;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+        .btn-booking:hover {
+            background-color: #a66f0d;
+            transform: translateY(-2px);
+        }
+        /* إخفاء رسالة التأكيد والنموذج بشكل افتراضي */
+        #booking-form,
+        #confirmation-message {
+            display: none;
+        }
+        /* إظهار النموذج افتراضيًا ما لم يكن هناك رابط `#confirmation-message` */
+        .card-body:not(:has(#confirmation-message:target)) #booking-form {
+            display: block;
+        }
+        /* إخفاء النموذج وإظهار رسالة التأكيد عند وجود رابط `#confirmation-message` */
+        #confirmation-message:target {
+            display: block;
+        }
+        .confirmation-message {
+            text-align: center;
+            padding: 50px 20px;
+        }
+        .confirmation-message .icon {
+            font-size: 4rem;
+            color: #28a745;
+            margin-bottom: 20px;
+        }
+        .confirmation-message h4 {
+            font-weight: bold;
+            color: #28a745;
+            margin-bottom: 15px;
+        }
+        .confirmation-message p {
+            font-size: 1.1rem;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h3>احجز رحلتك إلى الأقصر</h3>
+        </div>
+        <div class="card-body">
+            
+            <form action="#confirmation-message" id="booking-form">
+                <div class="mb-3">
+                    <label for="fullName" class="form-label">الاسم الكامل</label>
+                    <input type="text" class="form-control" id="fullName" placeholder="أدخل اسمك الكامل" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">البريد الإلكتروني</label>
+                    <input type="email" class="form-control" id="email" placeholder="أدخل بريدك الإلكتروني" required>
+                </div>
+                <div class="mb-3">
+                    <label for="tourType" class="form-label">نوع الرحلة</label>
+                    <select class="form-control" id="tourType" required>
+                        <option value="">اختر نوع الرحلة</option>
+                        <option value="valley-of-kings">وادي الملوك</option>
+                        <option value="karnak-temple">معبد الكرنك</option>
+                        <option value="nile-cruise">رحلة نيلية</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="date" class="form-label">تاريخ الرحلة</label>
+                    <input type="date" class="form-control" id="date" required>
+                </div>
+                <div class="mb-3">
+                    <label for="guests" class="form-label">عدد الأفراد</label>
+                    <input type="number" class="form-control" id="guests" min="1" max="10" value="1" required>
+                </div>
+
+                <div class="text-center mt-4">
+                    <button type="submit" class="btn-booking">تأكيد الحجز</button>
+                </div>
+            </form>
+
+            <div class="confirmation-message" id="confirmation-message">
+                <i class="fas fa-check-circle icon"></i>
+                <h4>تم الحجز بنجاح!</h4>
+                <p>شكراً لك، تم استلام بيانات حجزك. سيتم التواصل معك قريبًا لتأكيد التفاصيل النهائية لرحلتك.</p>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
