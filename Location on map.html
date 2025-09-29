@@ -1,80 +1,98 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>موقع على الخريطة</title>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    
-    <style>
-        body {
-            background-color: #f8f9fa;
-            font-family: 'Arial', sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-            padding: 20px;
-            direction: rtl;
-            box-sizing: border-box;
-        }
-        .container {
-            max-width: 800px; /* زيادة العرض لاستيعاب الخريطة */
-        }
-        .card {
-            border: none;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            margin-bottom: 20px; /* مسافة بين البطاقات */
-        }
-        .card-header {
-            background-color: white;
-            border-bottom: 1px solid #e9ecef;
-            padding: 20px 25px;
-            text-align: center;
-        }
-        .card-header h3 {
-            font-weight: 700;
-            color: #333;
-        }
-        .card-body {
-            padding: 30px;
-        }
-        .map-container {
-            width: 100%;
-            height: 400px; /* ارتفاع ثابت للخريطة */
-            border-radius: 8px;
-            overflow: hidden;
-        }
-        .map-container iframe {
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
-    </style>
+    <title>خريطة الأقصر التفاعلية: مواقع المعابد والآثار والمتاحف | Luxor Map</title>
+
+    <meta name="description" content="استخدم خريطة الأقصر التفاعلية لتحديد مواقع جميع المعابد والأماكن السياحية الهامة، وحساب المسافة بينها. دليل مرئي لرحلتك.">
+
 </head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+<style>
+    body {
+        background-color: #f8f9fa;
+        font-family: 'Arial', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        padding: 20px;
+        direction: rtl;
+        box-sizing: border-box;
+    }
+    
+    .container {
+        max-width: 800px;
+        /* زيادة العرض لاستيعاب الخريطة */
+    }
+    
+    .card {
+        border: none;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+        /* مسافة بين البطاقات */
+    }
+    
+    .card-header {
+        background-color: white;
+        border-bottom: 1px solid #e9ecef;
+        padding: 20px 25px;
+        text-align: center;
+    }
+    
+    .card-header h3 {
+        font-weight: 700;
+        color: #333;
+    }
+    
+    .card-body {
+        padding: 30px;
+    }
+    
+    .map-container {
+        width: 100%;
+        height: 400px;
+        /* ارتفاع ثابت للخريطة */
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    
+    .map-container iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+    }
+</style>
+</head>
+
 <body>
 
-<div class="container">
-    <div class="card">
-        <div class="card-header">
-            <h3>موقع معبد الكرنك على الخريطة</h3>
-        </div>
-        <div class="card-body">
-            <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3455.578676239922!2d32.6599727144904!3d25.718818215918737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145a27173b063851%3A0xc3f5c2499d8d646b!2sKarnak%20Temple%20Complex!5e0!3m2!1sen!2seg!4v1625900000000!5m2!1sen!2seg" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h3>موقع معبد الكرنك على الخريطة</h3>
             </div>
-            <div class="text-center mt-3">
-                <a href="https://maps.app.goo.gl/YourMapLinkHere" target="_blank" class="btn btn-primary" style="background-color: #c48310; border-color: #c48310;">افتح الموقع في خرائط جوجل</a>
+            <div class="card-body">
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3455.578676239922!2d32.6599727144904!3d25.718818215918737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145a27173b063851%3A0xc3f5c2499d8d646b!2sKarnak%20Temple%20Complex!5e0!3m2!1sen!2seg!4v1625900000000!5m2!1sen!2seg"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="text-center mt-3">
+                    <a href="https://maps.app.goo.gl/YourMapLinkHere" target="_blank" class="btn btn-primary" style="background-color: #c48310; border-color: #c48310;">افتح الموقع في خرائط جوجل</a>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
 
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

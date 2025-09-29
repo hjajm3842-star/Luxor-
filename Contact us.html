@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تواصل معنا</title>
+
+    <title>تواصل مع فريق موقع الأقصر: العنوان ورقم الهاتف</title>
+
+    <meta name="description" content="للاستفسارات، الشراكات، أو المساعدة في التخطيط لرحلتك إلى الأقصر، تواصل معنا عبر البريد الإلكتروني أو الهاتف. نتطلع لخدمتك.">
+
+
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    
+
     <style>
         body {
             background-color: #f8f9fa;
@@ -22,55 +28,67 @@
             direction: rtl;
             box-sizing: border-box;
         }
+        
         .container {
             max-width: 600px;
         }
+        
         .card {
             border: none;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
+        
         .card-header {
             background-color: white;
             border-bottom: 1px solid #e9ecef;
             padding: 20px 25px;
             text-align: center;
         }
+        
         .card-header h3 {
             font-weight: 700;
             color: #333;
         }
+        
         .card-body {
             padding: 30px;
         }
+        
         .contact-info {
             text-align: center;
             margin-bottom: 30px;
         }
+        
         .contact-info p {
             margin-bottom: 5px;
             font-size: 1.1rem;
             color: #555;
         }
+        
         .contact-info i {
             color: #c48310;
             margin-left: 10px;
             font-size: 1.2rem;
         }
+        
         .form-label {
             font-weight: bold;
             color: #555;
             text-align: right;
             display: block;
         }
+        
         .form-control {
             border-radius: 8px;
             border: 1px solid #ddd;
             padding: 12px;
             margin-bottom: 20px;
         }
+        
         textarea.form-control {
             min-height: 120px;
         }
+        
         .btn-submit {
             background-color: #c48310;
             color: #fff;
@@ -81,92 +99,101 @@
             transition: background-color 0.3s, transform 0.2s;
             border: none;
         }
+        
         .btn-submit:hover {
             background-color: #a66f0d;
             transform: translateY(-2px);
         }
         /* إخفاء رسالة النجاح والنموذج بشكل افتراضي */
+        
         #contact-form,
         #success-message {
             display: none;
         }
         /* إظهار النموذج افتراضيًا ما لم يكن هناك رابط `#success-message` */
+        
         .card-body:not(:has(#success-message:target)) #contact-form {
             display: block;
         }
         /* إخفاء النموذج وإظهار رسالة النجاح عند وجود رابط `#success-message` */
+        
         #success-message:target {
             display: block;
         }
+        
         .success-message {
             text-align: center;
             padding: 50px 20px;
         }
+        
         .success-message .icon {
             font-size: 4rem;
             color: #28a745;
             margin-bottom: 20px;
         }
+        
         .success-message h4 {
             font-weight: bold;
             color: #28a745;
             margin-bottom: 15px;
         }
+        
         .success-message p {
             font-size: 1.1rem;
             color: #555;
         }
     </style>
 </head>
+
 <body>
 
-<div class="container">
-    <div class="card">
-        <div class="card-header">
-            <h3>تواصل معنا</h3>
-        </div>
-        <div class="card-body">
-            
-            <div class="contact-info">
-                <p><i class="fas fa-envelope"></i> info@yourwebsite.com</p>
-                <p><i class="fas fa-phone-alt"></i> +20 123 456 7890</p>
-                <p><i class="fas fa-map-marker-alt"></i> الأقصر، مصر</p>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h3>تواصل معنا</h3>
             </div>
-            
-            <form action="#success-message" id="contact-form">
-                <div class="mb-3">
-                    <label for="fullName" class="form-label">الاسم الكامل</label>
-                    <input type="text" class="form-control" id="fullName" placeholder="أدخل اسمك الكامل" required>
-                </div>
-                <div class="mb-3">
-                    <label for="email" class="form-label">البريد الإلكتروني</label>
-                    <input type="email" class="form-control" id="email" placeholder="أدخل بريدك الإلكتروني" required>
-                </div>
-                <div class="mb-3">
-                    <label for="subject" class="form-label">الموضوع</label>
-                    <input type="text" class="form-control" id="subject" placeholder="موضوع الرسالة" required>
-                </div>
-                <div class="mb-3">
-                    <label for="message" class="form-label">الرسالة</label>
-                    <textarea class="form-control" id="message" rows="5" placeholder="اكتب رسالتك هنا..." required></textarea>
+            <div class="card-body">
+
+                <div class="contact-info">
+                    <p><i class="fas fa-envelope"></i> info@yourwebsite.com</p>
+                    <p><i class="fas fa-phone-alt"></i> +20 123 456 7890</p>
+                    <p><i class="fas fa-map-marker-alt"></i> الأقصر، مصر</p>
                 </div>
 
-                <div class="text-center mt-4">
-                    <button type="submit" class="btn-submit">إرسال</button>
-                </div>
-            </form>
+                <form action="#success-message" id="contact-form">
+                    <div class="mb-3">
+                        <label for="fullName" class="form-label">الاسم الكامل</label>
+                        <input type="text" class="form-control" id="fullName" placeholder="أدخل اسمك الكامل" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">البريد الإلكتروني</label>
+                        <input type="email" class="form-control" id="email" placeholder="أدخل بريدك الإلكتروني" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="subject" class="form-label">الموضوع</label>
+                        <input type="text" class="form-control" id="subject" placeholder="موضوع الرسالة" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">الرسالة</label>
+                        <textarea class="form-control" id="message" rows="5" placeholder="اكتب رسالتك هنا..." required></textarea>
+                    </div>
 
-            <div class="success-message" id="success-message">
-                <i class="fas fa-check-circle icon"></i>
-                <h4>تم إرسال رسالتك بنجاح!</h4>
-                <p>شكراً لك على تواصلك، سيتم الرد عليك في أقرب وقت ممكن.</p>
+                    <div class="text-center mt-4">
+                        <button type="submit" class="btn-submit">إرسال</button>
+                    </div>
+                </form>
+
+                <div class="success-message" id="success-message">
+                    <i class="fas fa-check-circle icon"></i>
+                    <h4>تم إرسال رسالتك بنجاح!</h4>
+                    <p>شكراً لك على تواصلك، سيتم الرد عليك في أقرب وقت ممكن.</p>
+                </div>
+
             </div>
-
         </div>
     </div>
-</div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 
 </body>

@@ -1,9 +1,16 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>تسجيل الدخول</title>
+
+    <meta name="robots" content="noindex, nofollow">
+
+</head>
+
+<body>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
@@ -21,44 +28,53 @@
             direction: rtl;
             box-sizing: border-box;
         }
+        
         .container {
             max-width: 550px;
         }
+        
         .card {
             border: none;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
+        
         .card-header {
             background-color: white;
             border-bottom: 1px solid #e9ecef;
             padding: 20px 25px;
             text-align: center;
         }
+        
         .card-header h3 {
             font-weight: 700;
             color: #333;
         }
+        
         .card-body {
             padding: 30px;
         }
+        
         .form-label {
             font-weight: bold;
             color: #555;
             text-align: right;
             display: block;
         }
+        
         .form-control {
             border-radius: 8px;
             border: 1px solid #ddd;
             padding: 12px;
             margin-bottom: 20px;
         }
+        
         .social-login {
             display: flex;
             flex-direction: column;
             gap: 15px;
             margin-bottom: 25px;
         }
+        
         .social-btn {
             width: 100%;
             padding: 12px;
@@ -75,17 +91,32 @@
             text-decoration: none;
             border: 1px solid #007bff;
         }
+        
         .social-btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
+        
         .social-icon {
             font-size: 20px;
             margin-left: 10px;
         }
-        .facebook-btn { background-color: #1877f2; border-color: #1877f2; }
-        .google-btn { background-color: #db4437; border-color: #db4437; }
-        .instagram-btn { background-color: #E1306C; border-color: #E1306C; }
+        
+        .facebook-btn {
+            background-color: #1877f2;
+            border-color: #1877f2;
+        }
+        
+        .google-btn {
+            background-color: #db4437;
+            border-color: #db4437;
+        }
+        
+        .instagram-btn {
+            background-color: #E1306C;
+            border-color: #E1306C;
+        }
+        
         .separator {
             display: flex;
             align-items: center;
@@ -93,14 +124,22 @@
             color: #aaa;
             margin: 20px 0;
         }
+        
         .separator::before,
         .separator::after {
             content: '';
             flex: 1;
             border-bottom: 1px solid #ddd;
         }
-        .separator:not(:empty)::before { margin-left: 0.25em; }
-        .separator:not(:empty)::after { margin-right: 0.25em; }
+        
+        .separator:not(:empty)::before {
+            margin-left: 0.25em;
+        }
+        
+        .separator:not(:empty)::after {
+            margin-right: 0.25em;
+        }
+        
         .btn-login {
             background-color: #007bff;
             color: #fff;
@@ -114,110 +153,122 @@
             display: inline-block;
             text-align: center;
         }
+        
         .btn-login:hover {
             background-color: #0056b3;
             transform: translateY(-2px);
         }
+        
         .signup-link {
             text-align: center;
             margin-top: 20px;
             font-size: 14px;
         }
+        
         .signup-link a {
             color: #007bff;
             text-decoration: none;
             font-weight: bold;
         }
-        
         /* CSS لإخفاء وإظهار المحتوى */
-        #login-content, #login-success-message {
+        
+        #login-content,
+        #login-success-message {
             display: none;
         }
+        
         .card-body:not(:has(#login-success-message:target)) #login-content {
             display: block;
         }
+        
         #login-success-message:target {
             display: block;
         }
+        
         .login-success-message {
             text-align: center;
             padding: 50px 20px;
         }
+        
         .login-success-message .icon {
             font-size: 4rem;
             color: #28a745;
             margin-bottom: 20px;
         }
+        
         .login-success-message h4 {
             font-weight: bold;
             color: #28a745;
             margin-bottom: 15px;
         }
+        
         .login-success-message p {
             font-size: 1.1rem;
             color: #555;
         }
     </style>
-</head>
-<body>
+    </head>
 
-<div class="container">
-    <div class="card">
-        <div class="card-header">
-            <h3>تسجيل الدخول</h3>
-        </div>
-        <div class="card-body">
-            
-            <div id="login-content">
-                <div class="social-login">
-                    <a href="#" class="social-btn facebook-btn">
-                        <i class="fab fa-facebook-f social-icon"></i>
-                        <span>تسجيل الدخول باستخدام فيسبوك</span>
-                    </a>
-                    <a href="#" class="social-btn google-btn">
-                        <i class="fab fa-google social-icon"></i>
-                        <span>تسجيل الدخول باستخدام جوجل</span>
-                    </a>
-                    <a href="#" class="social-btn instagram-btn">
-                        <i class="fab fa-instagram social-icon"></i>
-                        <span>تسجيل الدخول باستخدام إنستجرام</span>
-                    </a>
+    <body>
+
+        <div class="container">
+            <div class="card">
+                <div class="card-header">
+                    <h3>تسجيل الدخول</h3>
                 </div>
+                <div class="card-body">
 
-                <div class="separator">
-                    <span>أو</span>
-                </div>
+                    <div id="login-content">
+                        <div class="social-login">
+                            <a href="#" class="social-btn facebook-btn">
+                                <i class="fab fa-facebook-f social-icon"></i>
+                                <span>تسجيل الدخول باستخدام فيسبوك</span>
+                            </a>
+                            <a href="#" class="social-btn google-btn">
+                                <i class="fab fa-google social-icon"></i>
+                                <span>تسجيل الدخول باستخدام جوجل</span>
+                            </a>
+                            <a href="#" class="social-btn instagram-btn">
+                                <i class="fab fa-instagram social-icon"></i>
+                                <span>تسجيل الدخول باستخدام إنستجرام</span>
+                            </a>
+                        </div>
 
-                <form action="#login-success-message">
-                    <div class="mb-3">
-                        <label for="email" class="form-label">البريد الإلكتروني</label>
-                        <input type="email" class="form-control" id="email" placeholder="أدخل بريدك الإلكتروني" required>
+                        <div class="separator">
+                            <span>أو</span>
+                        </div>
+
+                        <form action="#login-success-message">
+                            <div class="mb-3">
+                                <label for="email" class="form-label">البريد الإلكتروني</label>
+                                <input type="email" class="form-control" id="email" placeholder="أدخل بريدك الإلكتروني" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">كلمة المرور</label>
+                                <input type="password" class="form-control" id="password" placeholder="أدخل كلمة المرور" required>
+                            </div>
+
+                            <div class="text-center mt-4">
+                                <button type="submit" class="btn-login">تسجيل الدخول</button>
+                            </div>
+                        </form>
+
+                        <div class="signup-link">
+                            لا تمتلك حسابًا؟ <a href="#">إنشاء حساب جديد</a>
+                        </div>
                     </div>
-                    <div class="mb-3">
-                        <label for="password" class="form-label">كلمة المرور</label>
-                        <input type="password" class="form-control" id="password" placeholder="أدخل كلمة المرور" required>
-                    </div>
 
-                    <div class="text-center mt-4">
-                        <button type="submit" class="btn-login">تسجيل الدخول</button>
+                    <div class="login-success-message" id="login-success-message">
+                        <i class="fas fa-check-circle icon"></i>
+                        <h4>تم تسجيل الدخول بنجاح!</h4>
+                        <p>مرحباً بك، تم تسجيل دخولك بنجاح. يمكنك الآن تصفح الموقع والاستمتاع بالخدمات المتاحة.</p>
                     </div>
-                </form>
-
-                <div class="signup-link">
-                    لا تمتلك حسابًا؟ <a href="#">إنشاء حساب جديد</a>
                 </div>
             </div>
-
-            <div class="login-success-message" id="login-success-message">
-                <i class="fas fa-check-circle icon"></i>
-                <h4>تم تسجيل الدخول بنجاح!</h4>
-                <p>مرحباً بك، تم تسجيل دخولك بنجاح. يمكنك الآن تصفح الموقع والاستمتاع بالخدمات المتاحة.</p>
-            </div>
         </div>
-    </div>
-</div>
 
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+
 </html>
