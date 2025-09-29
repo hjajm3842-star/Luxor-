@@ -1,0 +1,23 @@
+.nav-link {
+    color: inherit;
+    font-size: 23px;
+}
+
+
+/* تأثير الهوفر على روابط الـ navbar */
+
+.nav-link:hover {
+    color: #ffd700;
+    color: #1937bc
+    /* يمكنك تغيير اللون الأزرق إلى أي لون آخر */
+}
+
+
+/* ... باقي تنسيقاتك ... */
+
+.tiny-profile-pic {
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
